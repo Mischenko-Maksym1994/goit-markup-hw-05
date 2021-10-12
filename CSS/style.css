@@ -586,10 +586,12 @@ address {
   color: var(--primary-text-color);
 }
 
-.projects-links-img {
+/* .projects-links-img {
+  position: relative;
+} */
+.project-box {
   position: relative;
 }
-
 .projects-fon {
   position: absolute;
   top: 0;
