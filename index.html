@@ -351,17 +351,6 @@
                 </ul>
             </div>
         </section>
-
-        <!-- Модальное окно -->
-        <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-                <button class="modal-btn" data-modal-close>
-                 <svg class="modal-icon-close">
-                     <use href="./image/symbol-defs.svg#icon-close-black"></use>
-                 </svg>   
-                </button>
-            </div>
-        </div>
         
     </main>
 
@@ -419,7 +408,33 @@
         </div>
         
     </footer>
-    <script src="./js/modal.js"></script>
+    
+    <!-- Модальное окно -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-btn" data-modal-close>
+                <svg class="modal-icon-close">
+                    <use href="./image/symbol-defs.svg#icon-close-black"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        
+        const refs = {
+                openModalBtn: document.querySelector('[data-modal-open]'),
+                closeModalBtn: document.querySelector('[data-modal-close]'),
+                modal: document.querySelector('[data-modal]'),
+            };
+
+            refs.openModalBtn.addEventListener('click', toggleModal);
+            refs.closeModalBtn.addEventListener('click', toggleModal);
+
+            function toggleModal() {
+                refs.modal.classList.toggle('is-hidden');
+            }
+    </script>
 </body>
 
 </html>
