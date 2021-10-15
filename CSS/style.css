@@ -567,6 +567,10 @@ address {
   border: 1px solid #eeeeee;
 }
 
+.projects-link:hover .is-hidden-fon {
+  opacity: 1;
+}
+
 .projects-title {
   font-weight: 700;
   font-size: 18px;
@@ -582,9 +586,6 @@ address {
   color: var(--primary-text-color);
 }
 
-/* .projects-links-img {
-  position: relative;
-} */
 .project-box {
   position: relative;
 }
@@ -600,6 +601,8 @@ address {
   height: 294px;
 
   background-color: rgba(33, 150, 243, 0.9);
+
+  opacity: 0;
 }
 
 .projects-fon-text {
@@ -657,4 +660,9 @@ address {
   width: 18px;
   height: 18px;
   fill: black;
+}
+.modal-btn:hover {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
 }
